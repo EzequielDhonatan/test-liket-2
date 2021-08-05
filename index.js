@@ -5,16 +5,6 @@ const puppeteer = require('puppeteer'); // puppeteer
 
 const server = express(); // Start server
 
-const port = 3005; // Port server
-
-server.get( '/', (request, response) => {
-    response.send( 'Olá mundo!' );
-});
-
-server.listen(port, () => {
-    console.log( `Servidor subiu com sucesso!` )
-});
-
 ( async () => {
 
     const browser = await puppeteer.launch(
@@ -22,11 +12,11 @@ server.listen(port, () => {
             headless: false,
         }
     ); // browser
-
-    const login     = 'https://portal.ifood.com.br/login'; // Login
-    const home      = 'https://portal.ifood.com.br/home'; // Home
-    const menu      = 'https://portal.ifood.com.br/menu'; // Menu
-    const category  = 'https://portal.ifood.com.br/menu/category'; // Category
+    
+    const login         = 'https://portal.ifood.com.br/login'; // Login
+    const home          = 'https://portal.ifood.com.br/home'; // Home
+    const menu          = 'https://portal.ifood.com.br/menu'; // Menu
+    const menuCategory  = 'https://portal.ifood.com.br/menu/category'; // Menu Category
 
     const page = await browser.newPage(); // Open the browser
 
@@ -48,9 +38,9 @@ server.listen(port, () => {
 
     await page.click('[type="submit"]') // Advance
 
-    await page.waitForNavigation(); // 
+    await page.waitForNavigation(); // Form Navigation
     
-    await page.goto(menu); // Access "Menu"
+    await page.goto(home); // Access "Home"
 
     await page.waitForTimeout(5000); // Wait
 
@@ -58,9 +48,10 @@ server.listen(port, () => {
 
     await page.waitForTimeout(5000); // Wait
 
-    await page.goto(category); // Access "Menu - Category"
+    await page.goto(menuCategory); // Access "Menu - Category"
 
-    // Return Json
+    console.log('pageContent:', pageContent);
 
-    // await browser.close();
-})();
+    // await browser.close(); // Browser close
+
+})(); //
