@@ -1,19 +1,19 @@
 require('dotenv').config();
 
-// const express = require( 'express' ); // express
+const express = require( 'express' ); // express
 const puppeteer = require('puppeteer'); // puppeteer
 
-// const server = express(); // Start server
+const server = express(); // Start server
 
-// const port = 4000; // Port server
+const port = 3005; // Port server
 
-// server.get( '/', (request, response) => {
-//     response.send( 'Olá mundo!' );
-// });
+server.get( '/', (request, response) => {
+    response.send( 'Olá mundo!' );
+});
 
-// server.listen(port, () => {
-//     console.log( `Servidor subiu com sucesso!` )
-// });
+server.listen(port, () => {
+    console.log( `Servidor subiu com sucesso!` )
+});
 
 ( async () => {
 
