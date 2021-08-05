@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ezequieldhonatan/test-liket/issues"
   },
-  "homepage": "https://github.com/ezequieldhonatan/test-liket#readme"
+  "homepage": "https://github.com/ezequieldhonatan/test-liket#readme",
+  "dependencies": {
+    "puppeteer-core": "^10.2.0"
+  }
 }
