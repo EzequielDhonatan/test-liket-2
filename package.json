@@ -4,6 +4,8 @@
   "description": "Test Liket",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +21,8 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "puppeteer": "^10.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
