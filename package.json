@@ -1,0 +1,19 @@
+{
+  "name": "test-liket",
+  "version": "1.0.0",
+  "description": "Test Liket",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ezequieldhonatan/test-liket.git"
+  },
+  "author": "Ezequiel Dhonatan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ezequieldhonatan/test-liket/issues"
+  },
+  "homepage": "https://github.com/ezequieldhonatan/test-liket#readme"
+}
